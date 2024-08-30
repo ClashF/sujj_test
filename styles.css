@@ -1,0 +1,191 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background: black;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-height: 72px;
+}
+
+/* Logo */
+nav img {
+    width: 170px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Call Us Button */
+.btn {
+    background: gold;
+    color: black;
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: 2px solid gold;
+    transition: background 0.5s, color 0.5s;
+    margin-left: 20px;
+}
+
+.btn:hover {
+    background: black;
+    color: gold;
+}
+
+/* Menu Toggle Button (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.cn2{
+    background: black;
+    padding-top: 40px;
+  }
+  .banner{
+    display: flex;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .categ{
+    font-family: "playfair";
+    padding-left: 630px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    font-size: 30px;
+  }
+  .cn2 img{
+    width:1500px;
+     height:600px;
+  }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    /* Show menu toggle button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 15px;
+    }
+
+    /* Hide navigation links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        margin-top: 10px;
+    }
+
+    /* Show navigation links when toggled */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .btn {
+        margin: 10px auto 0 auto;
+    }
+    nav img {
+        width: 150px; /* Adjust logo size for smaller screens */
+        padding:0px;
+        margin:0px;
+    }
+    .cn2 img{
+        width:600px;
+         height:300px;
+      }
+      .header{
+        padding-top: 0px;
+        width:600px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+      }
+      .categ{
+
+      }
+}
+
+@media (max-width: 480px) {
+    nav img {
+        width: 150px; /* Adjust logo size for smaller screens */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+    .cn2{
+        padding-top: 0px;
+    }
+    .cn2 img{
+        width:580px;
+         height:300px;
+         padding-left:110px;
+      }
+}
